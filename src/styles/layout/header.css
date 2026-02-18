@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-header{
+    background-color: #0C2340;
+    width: 100vw;
+    height: 20vh;
+}
+.nav-list{
+    height: 100%;
+    color: aqua;
+    padding: 30px;
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+    font-size: 1.5rem;
+}
+
+
+/* for mobile view apporach */
+.hamburger{
+  display: block;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+}
+.hamburger span{
+     display: block;
+  height: 3px;
+  width: 100%;
+  background-color: aqua;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
