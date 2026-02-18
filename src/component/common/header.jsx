@@ -2,7 +2,7 @@ import "../../styles/layout/header.css"
 export default function Header() {
   return (
     <>
-       <Hamburger/>
+      <Hamburger/>
       <header className="main-header">
         <nav className="navbar">
           <ul className="nav-list">

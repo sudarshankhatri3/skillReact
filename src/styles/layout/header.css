@@ -6,7 +6,7 @@
 .main-header{
     background-color: #0C2340;
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
 }
 .nav-list{
     height: 100%;
@@ -30,18 +30,18 @@ a{
 
 /* for mobile view apporach */
 .hamburger{
-  display: block;
+  display: none;
   width: 30px;
   height: 25px;
   cursor: pointer;
   position: relative;
 }
 .hamburger span{
-     display: block;
-  height: 3px;
-  width: 100%;
-  background-color: aqua;
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.3s;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: aqua;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
 }
