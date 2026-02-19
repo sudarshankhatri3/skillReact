@@ -1,9 +1,15 @@
-export default function Login(){
-    return (
-        <>
-           <div>
-             <a href="login">Login</a>
-           </div>
-        </>
-    )
+function Greeting(props){
+  return (
+    <>
+       <div>
+         <p>{props.name}</p>
+       </div>
+    </>
+  )
+}
+
+
+export default function Greet(){
+  const data="sudarshan khatri"
+  return <Greeting  name={data}/>
 }

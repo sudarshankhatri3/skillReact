@@ -8,7 +8,8 @@ let listName=data.map((value)=>{
 export default function Practice(){
     return (
         <>
-
+{/* lifting state up 
+props drilling  */}
         <div>
             <div>
                 <li>title</li>
