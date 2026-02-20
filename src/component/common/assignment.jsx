@@ -261,7 +261,8 @@ export default function ShowProduct(){
 function ProductItem(props){
     return (
         <>
-          <div className="product_cart">
+        <div className="page">
+           <div className="product_cart">
         <div className="product_list">
                 <img src={props.product.image} alt={props.product.title} width={60} height={50} />
                 <h3>{props.product.title}</h3>
@@ -271,6 +272,8 @@ function ProductItem(props){
                 <p>Rating: {props.product.rating.rate} ({props.product.rating.count} reviews)</p>
         </div>
     </div>
+        </div>
+         
         </>
     )
   
