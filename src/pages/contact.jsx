@@ -2,7 +2,7 @@ export default function Contact(){
     return (
         <> 
            <div>
-            <h3>Contact us bitch</h3>
+            <h3>Contact us call me</h3>
            </div>
         </>
     )

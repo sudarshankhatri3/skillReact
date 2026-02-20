@@ -10,14 +10,14 @@ export default function Counter(){
     const [show,setShow]=useState(null)
 
     const homeShower=()=>{
-       setShow(<Home/>)
+       setShow("home")
     }
 
     const aboutShower=()=>{
-        setShow(<About/>)
+        setShow("about")
     }
     const contactShower=()=>{
-        setShow(<Contact/>)
+        setShow("contact")
     }
 
 
@@ -30,7 +30,8 @@ export default function Counter(){
 
     return(
         <>
-          <button onClick={incrementClick}>+</button>
+        <header>
+            <button onClick={incrementClick}>+</button>
           <h2>{count}</h2>
           <button onClick={decrementClick}>-</button>
            <br />
@@ -40,6 +41,13 @@ export default function Counter(){
            <button onClick={contactShower}>Contact</button>
 
            <hr />
+
+           {show==="home" &&<Home/>}
+           {show==="about" && <About/>}
+           {show==="contact" && <Contact/>}
+
+        </header>
+         
 
         </>
     )

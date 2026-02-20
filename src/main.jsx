@@ -8,12 +8,14 @@ import Greeting from './component/common/login'
 import Topsection from './component/common/headers'
 import Counter from './component/common/counter'
 import ParentData from './component/common/practice'
+import ProductCart from './component/common/cartProduct'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   
     {/* <ParentData/> */}
     <Counter/>
+    <ProductCart/>
    
   </StrictMode>,
 )
