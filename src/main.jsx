@@ -7,16 +7,13 @@ import ShowProduct from './component/common/assignment'
 import Greeting from './component/common/login'
 import Topsection from './component/common/headers'
 import Counter from './component/common/counter'
+import ParentData from './component/common/practice'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <Header/>
-    <Login/>
-    <Practice/> */}
-    {/* <ShowProduct/>
-    <Greeting/> */}
-    {/* <Topsection/> */}
+  
+    {/* <ParentData/> */}
     <Counter/>
-
+   
   </StrictMode>,
 )
