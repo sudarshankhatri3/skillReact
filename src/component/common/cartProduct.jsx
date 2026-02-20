@@ -269,41 +269,27 @@ let data = [
   },
 ];
 
-export default function ProductCart() {
-  const [cart, setCart] = useState([]);
-
-  function addToCart(value) {
-    setCart[cart, value];
+export default function Cart(){
+  const [cart,setCart]=useState([])
+  console.log("Add cart Item::",cart)
+  function addToCart(value){
+    return setCart([...cart,value])
   }
 
   return (
-    <>
-      <div>
-        Item length:{cart.length}
-        <ul>
-          {data.map((item, index) => {
-            const datafilter = cart.filter(
-              (cartData) => cartData.id === item.id,
-            );
-            const dataFilter = datafilter.length > 0;
-            return (
-              <>
-                <li key={index}>
-                  {item.title}
-                  {!dataFilter && (
-                    <button onClick={() => addToCart(item)}>Add to cart</button>
-                  )}
-                  {dataFilter && (
-                    <button onClick={() => removeFromCart(item)}>
-                      Remove from cart
-                    </button>
-                  )}
-                </li>
-              </>
-            );
-          })}
-        </ul>
-      </div>
+    <> 
+      {
+        data.map((product)=>(
+          <div>
+            <h2>{product.title}</h2>
+            <p>{product.title}</p>
+            <img src={product.image} alt={product.title} />
+            <p>Rating:{product.rate} {product.count}</p>
+            <button onClick={()=>addToCart(product)}>Add to cart</button>
+          </div>
+          
+        ))
+      }
     </>
-  );
+  )
 }
