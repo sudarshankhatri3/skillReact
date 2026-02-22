@@ -269,37 +269,48 @@ let data = [
   },
 ];
 
-export default function Cart(){
-  const [cart,setCart]=useState([])
-  console.log("Add cart Item::",cart)
-  function addToCart(value){
-    return setCart([...cart,value])
+export default function Cart() {
+  const [cart, setCart] = useState([]);
+  console.log("Add cart Item::", cart);
+  function addToCart(value) {
+    return setCart([...cart, value]);
+  }
+  function removeFromCart(value) {
+    return setCart([...cart]);
   }
 
   return (
-    <> 
-     {
-      data.map((product)=>{
-        const dataFilter=cart.filter((data)=>data.id===product.id)
-        const dataLength=dataFilter.length>0
-        console.log(`Length of dataFilter:${dataLength}`)
-        console.log(dataFilter)
-
-        return (
-          <div key={product.id}>
-            <img src={product.image} alt={product.id} width={200} height={100} />
-            <h3>{product.title}</h3>
-            <p>{product.price}</p>
-            <p>Rating:{product.rating.rate} {product.rating.count}</p>
-            <button onClick={()=>addToCart(product)}>Add To cart</button>
-            {!dataLength && <button onClick={()=>{addToCart(product)}}>Add Unique product</button>}
-
-          </div>
-        )
-       
-
-      })
-     }
+    <>
+      {data.map((product) => {
+        const dataFilter = cart.filter((data) => data.id === product.id);
+        const dataLength = dataFilter.length > 0;
+        if (!dataLength){
+          return (
+            <div key={product.id}>
+              <img
+                src={product.image}
+                alt={product.id}
+                width={200}
+                height={100}
+              />
+              <h3>{product.title}</h3>
+              <p>{product.price}</p>
+              <p>
+                Rating:{product.rating.rate} {product.rating.count}
+              </p>
+              <button onClick={() => addToCart(product)}>Add To cart</button>
+              {/* <button
+                onClick={() => {
+                  addToCart(product);
+                }}
+              >
+              single source of truth ,mount ,unmount,state preserve :lifting props up
+                Add Unique product
+              </button> */}
+            </div>
+          );
+        }
+      })}
     </>
-  )
+  );
 }

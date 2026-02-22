@@ -8,13 +8,17 @@ import Greeting from './component/common/login'
 import Topsection from './component/common/headers'
 import Counter from './component/common/counter'
 import ParentData from './component/common/practice'
-import Cart from './component/common/cartProduct'
+// import Cart from './component/common/cartProduct'
+import FormCmp from './component/common/formHandler'
+import Cart from './component/common/fullProduct'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   
     {/* <ParentData/> */}
-    <Counter/>
+    {/* <Counter/>
+    <Cart/> */}
+    {/* <FormCmp/> */}
     <Cart/>
    
   </StrictMode>,
