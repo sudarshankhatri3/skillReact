@@ -278,18 +278,28 @@ export default function Cart(){
 
   return (
     <> 
-      {
-        data.map((product)=>(
-          <div>
-            <h2>{product.title}</h2>
-            <p>{product.title}</p>
-            <img src={product.image} alt={product.title} />
-            <p>Rating:{product.rate} {product.count}</p>
-            <button onClick={()=>addToCart(product)}>Add to cart</button>
+     {
+      data.map((product)=>{
+        const dataFilter=cart.filter((data)=>data.id===product.id)
+        const dataLength=dataFilter.length>0
+        console.log(`Length of dataFilter:${dataLength}`)
+        console.log(dataFilter)
+
+        return (
+          <div key={product.id}>
+            <img src={product.image} alt={product.id} width={200} height={100} />
+            <h3>{product.title}</h3>
+            <p>{product.price}</p>
+            <p>Rating:{product.rating.rate} {product.rating.count}</p>
+            <button onClick={()=>addToCart(product)}>Add To cart</button>
+            {!dataLength && <button onClick={()=>{addToCart(product)}}>Add Unique product</button>}
+
           </div>
-          
-        ))
-      }
+        )
+       
+
+      })
+     }
     </>
   )
 }
