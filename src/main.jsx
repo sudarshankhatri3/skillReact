@@ -11,6 +11,7 @@ import ParentData from './component/common/practice'
 // import Cart from './component/common/cartProduct'
 import FormCmp from './component/common/formHandler'
 import Cart from './component/common/fullProduct'
+import ProductCrud from './component/common/crud'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,7 +20,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Counter/>
     <Cart/> */}
     {/* <FormCmp/> */}
-    <Cart/>
+    {/* <Cart/> */}
+    <ProductCrud/>
    
   </StrictMode>,
 )
