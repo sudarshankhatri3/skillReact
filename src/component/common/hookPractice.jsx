@@ -276,21 +276,42 @@ export function Product(){
 
 
     function addToCart(data){
+        console.log("Before add product:",cart)
         setCart([...cart,data])
+        console.log("After add product:",cart)
     }
     function removeToCart(data){
-        setCart([...cart])
+       const updatedData=cart.filter((prod)=>prod.id!==data.id)
+       console.log("updated Data:",updatedData)
+       setCart([...updatedData])
+    }
+    function countItem(prod){
+        let count=0
+        const countData=cart.filter((data)=>{
+            if(data.id===prod.id){
+                count+=1   
+            }
+            
+        })
+
     }
 
 
     return (
         <>
-           {productData.map((product)=>{
-            <button onClick={()=>addToCart(product)}>Add To cart</button>
-           })}
+           {productData.map((product)=>(
+
+            <div key={product.id}>
+                <img src={product.image} alt={product.title} height={200} width={150} />
+                <h3>{product.title}</h3>
+                <p>{product.price}</p>
+                <p>{product.category}</p>
+                <p>{product.description}</p>
+                <button onClick={()=>addToCart(product)}>Add To cart</button>
+                <button onClick={()=>removeToCart(product)}>Remove to cart</button>
+            </div>
+           
+           ))}
         </>
     )
-
-
-
 }
