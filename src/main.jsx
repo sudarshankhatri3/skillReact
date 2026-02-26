@@ -13,6 +13,7 @@ import FormCmp from './component/common/formHandler'
 import Cart from './component/common/fullProduct'
 import ProductCrud from './component/common/crud'
 import CounterData from './component/common/hookPractice'
+ import {Product} from './component/common/hookPractice'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Cart/> */}
     {/* <ProductCrud/> */}
     <CounterData/>
+    <Product/>
    
   </StrictMode>,
 )
