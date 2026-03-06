@@ -23,9 +23,9 @@ createRoot(document.getElementById('root')).render(
     <Cart/> */}
     {/* <FormCmp/> */}
     {/* <Cart/> */}
-    {/* <ProductCrud/> */}
-    <CounterData/>
-    <Product/>
+    <ProductCrud/>
+    {/* <CounterData/>
+    <Product/> */}
    
   </StrictMode>,
 )
